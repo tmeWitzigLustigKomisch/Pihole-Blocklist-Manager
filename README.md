@@ -15,7 +15,7 @@ Bitte beachte: Dieses Programm befindet sich noch in der aktiven Entwicklung (**
 * *Wichtig:* Die grundlegende Funktionalität und das Blocken der Domains im Pi-hole werden durch die Sortierung oder die Ladezeit **nicht beeinträchtigt**!
 
 ## 💡 Die Lösung: Die Offline-Master-Liste
-Dieses Skript (`Pihole_blocklistmanager_v2.2_2.py`) löst genau dieses Problem. Es fungiert als intelligenter Aggregator:
+Dieses Skript (`Pihole_blocklistmanager_v2.2.py`) löst genau dieses Problem. Es fungiert als intelligenter Aggregator:
 1. Es lädt alle favorisierten externen Listen herunter (z.B. aus der Datei `Pihole_Quell_Links.txt`).
 2. Es bereinigt sie (entfernt Duplikate, Kommentare und ungültige Präfixe wie `127.0.0.1` oder `::`).
 3. Es fügt sie mit deinen bestehenden, lokal gesicherten Listen (z.B. der 2,5 GB Liste) zu einer gigantischen Master-Blockliste zusammen.
@@ -55,7 +55,7 @@ Da Plattformen wie GitHub strenge Limits für Dateiuploads haben (25 MB im Web, 
 1. **Voraussetzungen:** Ein lauffähiges Linux-System (getestet: Linux Mint 22.3) mit Python 3. Unter manchen Linux-Distributionen muss `python3-tk` für die grafische Oberfläche manuell nachinstalliert werden. Zudem benötigst du einen Pi-hole Server und einen Webserver für den Datei-Upload.
 2. **Starten:** Führe das Skript im Terminal aus:
    ```bash
-   sudo python3 Pihole_blocklistmanager_v2.2_2.py
+   sudo python3 Pihole_blocklistmanager_v2.2.py
    ```
 3. **Tresor einrichten:** Beim allerersten Start fordert dich das Tool auf, ein Master-Passwort festzulegen. Mit diesem wird das Skript fortan verschlüsselt.
 4. **Links Importieren:** Klicke links auf **"🔗 Quell-Links Import"** und wähle die beigelegte Datei `Pihole_Quell_Links.txt`. Darin befinden sich über 140 verifizierte Basis-URLs, die sofort geladen werden.
